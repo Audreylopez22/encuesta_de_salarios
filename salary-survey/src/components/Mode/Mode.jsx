@@ -19,7 +19,7 @@ const Mode = () => {
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    d3.csv("/data/20250603.csv").then((data) => {
+    d3.csv(`${import.meta.env.BASE_URL}data/20250603.csv`).then((data) => {
       const inglesKey = "¿Cuál es su nivel de inglés? Marco de referencia Europeo";
       const empresaKey = "¿Para qué tipo de empresa trabaja?";
       const niveles = ["A1", "A2", "B1", "B2", "C1", "C2"];
